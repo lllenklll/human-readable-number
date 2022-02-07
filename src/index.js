@@ -1,3 +1,11 @@
+const a = ['', 'one ', 'two ', 'three ', 'four ', 'five ', 'six ', 'seven ', 'eight ', 'nine ', 'ten ', 'eleven ', 'twelve ', 'thirteen ', 'fourteen ', 'fifteen ', 'sixteen ', 'seventeen ', 'eighteen ', 'nineteen ']
+const b = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+
+const regex = /^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/
+
+const getLT20 = (n) => a[Number(n)]
+const getGT20 = (n) => b[n[0]] + ' ' + a[n[1]]
+
 module.exports = function toReadable (number) {
    
   const num = Number(number)
